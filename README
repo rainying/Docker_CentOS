@@ -1,1 +1,12 @@
 Docker在CentOS上的基本部署	
+
+yum  -y install epel-release
+
+yum -y install git 
+
+git clone https://github.com/rainying/Docker_CentOS.git ~/git/docker_centos
+
+sh ~/git/docker_centos
+
+
+
