@@ -4,7 +4,7 @@ yum  -y install epel-release
 
 yum -y install git 
 
-git clone https://github.com/rainying/Docker_CentOS.git ~/git/docker_centos
+git clone https://github.com/rainying/Docker_CentOS.git ~/github/docker_centos
 
 chmod +x ~/git/docker_centos/install/*.sh
 
