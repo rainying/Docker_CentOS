@@ -41,6 +41,10 @@ docker-compose exec -u root workspace bash
 ```
 
 ```
+composer create-project laravel/laravel --prefer-dist
+```
+
+```
 exit
 ```
 
@@ -57,3 +61,7 @@ sh ~/github/docker_centos/container/Laradock/Laradock.sh
 docker-compose logs #查看logs
 
 docker-compose down #關閉所有服務
+
+docker-compose exec -u root nginx bash
+
+docker-compose exec -u root workspace bash
