@@ -21,13 +21,9 @@ perl -pi -e 's/root \/var\/www\/public/root \/var\/www\/laravel\/public/g' nginx
 
 cd ~/Laradock
 
+/bin/cp ~/github/docker_centos/container/Laradock/file/docker-compose.yml ~/Laradock/docker-compose.yml
+
 docker-compose up -d nginx mysql phpmyadmin redis workspace 
-
-docker-compose exec -u root workspace bash
-
-composer create-project laravel/laravel --prefer-dist
-
-exit
 
 shutdown -h now  
 
