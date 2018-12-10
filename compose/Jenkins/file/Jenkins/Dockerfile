@@ -8,7 +8,7 @@ RUN mkdir /home/jenkins
 
 RUN mkdir /home/jenkins/.m2
 
-RUN chmod -R 777 /home/jeckins
+RUN chmod -R 777 /home/jenkins
 
 EXPOSE 8080 8443 50000
 
