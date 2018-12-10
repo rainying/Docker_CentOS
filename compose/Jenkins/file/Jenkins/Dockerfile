@@ -10,8 +10,10 @@ RUN mkdir /home/jenkins/.m2
 
 RUN chmod -R 777 /home/jeckins
 
-CMD []
+EXPOSE 8080 8443 50000
 
-EXPOSE 80 443 50000
+ENTRYPOINT [ "/app-entrypoint.sh" ]
+
+CMD [ "nami", "start", "--foreground", "jenkins" ]
 
 	

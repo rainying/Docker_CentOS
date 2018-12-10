@@ -1,11 +1,13 @@
-mkdir /root/Jenkins
-
 mkdir /root/JenkinsFile
 
-cd /root/Jenkins
+rm -rf /root/Jenkins
 
-/bin/cp ~/github/docker_centos/compose/Jenkins/file/docker-compose.yml /root/Jenkins/docker-compose.yml
+/bin/cp -R ~/github/docker_centos/compose/Jenkins/file /root/Jenkins
 
 --原始檔 https://raw.githubusercontent.com/bitnami/bitnami-docker-jenkins/master/docker-compose.yml
+
+docker-compose down
+
+docker-compose build
 
 docker-compose up -d

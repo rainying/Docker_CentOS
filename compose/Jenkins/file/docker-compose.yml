@@ -1,7 +1,8 @@
 version: '2'
 services:
   jenkins:
-    context: ./Jenkins
+    build:
+      context: ./Jenkins
     labels:
       kompose.service.type: nodeport
     ports:
