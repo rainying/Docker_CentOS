@@ -10,4 +10,4 @@ services:
       - '443:8443'
       - '50000:50000'
     volumes:
-      - '/Docker/JenkinsVolumes:/bitnami/jenkins'
+      - '/Docker/Jenkins/Volumes:/bitnami/jenkins'
