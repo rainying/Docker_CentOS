@@ -1,16 +1,31 @@
-mkdir /root/Jenkins
+```
+yum -y install epel-release
+```
 
-mkdir /root/JenkinsFile
+```
+yum -y install git 
+```
 
-cd /root/Jenkins
+```
+rm -rf ~/github/docker_centos
+```
 
-vi docker-compose.yml (修改檔案位置至 /root/JenkinsFile)
+```
+git clone https://github.com/rainying/Docker_CentOS.git ~/github/docker_centos
+```
 
-curl -sSL https://raw.githubusercontent.com/bitnami/bitnami-docker-jenkins/master/docker-compose.yml > /root/Jenkins/docker-compose.yml
+```
+chmod +x ~/github/docker_centos/compose/Jenkins/*.sh
+```
 
-docker-compose up -d
+```
+sh ~/github/docker_centos/compose/Jenkins/Jenkins.sh
+```
 
-帳密 user bitnami 
 
- SSH Agent , 
+以下為教學
+
+首先先用 帳密 user bitnami 登入。
+
+如何使用JDK + Maven 建置專案
 

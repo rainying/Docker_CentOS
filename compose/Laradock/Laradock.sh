@@ -1,6 +1,7 @@
 cd ~
 
 perl -pi -e 's/vboxadd:x:997/vboxadd:x:1000/g' /etc/passwd
+
 perl -pi -e 's/vboxsf:x:995/vboxsf:x:1000/g' /etc/group
 
 git clone https://github.com/laradock/laradock.git Laradock
