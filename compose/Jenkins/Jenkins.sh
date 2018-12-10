@@ -4,7 +4,7 @@ mkdir /Docker/Jenkins
 
 mkdir /Docker/Jenkins/Volumes
 
-rm -rf /Docker/Jenkins
+rm -rf /Docker/Jenkins/Main
 
 /bin/cp -R ~/github/docker_centos/compose/Jenkins/Compose /Docker/Jenkins/Main
 
