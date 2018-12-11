@@ -12,6 +12,12 @@ mkdir /Docker/Gitlab
 
 mkdir /Docker/Gitlab/Volumes
 
+chmod -R 777 /Docker/Redis/Volumes
+
+chmod -R 777 /Docker/Postgresql/Volumes
+
+chmod -R 777 /Docker/Gitlab/Volumes
+
 rm -rf /Docker/Gitlab/Main
 
 /bin/cp -R ~/github/docker_centos/compose/GitLab/Compose /Docker/Gitlab/Main
