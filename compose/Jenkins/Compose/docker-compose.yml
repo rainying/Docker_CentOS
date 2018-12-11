@@ -11,3 +11,4 @@ services:
       - '50000:50000'
     volumes:
       - '/Docker/Jenkins/Volumes:/bitnami/jenkins'
+      - '/Docker/Jenkins/Volumes/.m2:/home/jenkins/.m2'
