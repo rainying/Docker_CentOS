@@ -6,8 +6,8 @@ services:
     labels:
       kompose.service.type: nodeport
     ports:
-      - '80:8080'
-      - '443:8443'
+      - '8080:8080'
+      - '8443:8443'
       - '50000:50000'
     volumes:
       - '/Docker/Jenkins/Volumes:/bitnami/jenkins'

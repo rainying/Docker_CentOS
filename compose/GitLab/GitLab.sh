@@ -12,9 +12,11 @@ mkdir /Docker/Gitlab
 
 mkdir /Docker/Gitlab/Volumes
 
-/bin/cp -R ~/github/docker_centos/compose/GitLab/Compose /Docker/GitLab/Main
+rm -rf /Docker/Gitlab/Main
 
-cd /Docker/GitLab/Main
+/bin/cp -R ~/github/docker_centos/compose/GitLab/Compose /Docker/Gitlab/Main
+
+cd /Docker/Gitlab/Main
 
 --原始檔 https://raw.githubusercontent.com/bitnami/bitnami-docker-jenkins/master/docker-compose.yml
 
