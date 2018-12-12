@@ -23,13 +23,19 @@ sh ~/github/docker_centos/compose/Jenkins/Jenkins.sh
 ```
 
 
+cd /Docker/Jenkins/Main/
+
+docker-compose exec -u root jenkins bash
+
+
+
 以下為教學
 
 首先進入登入頁面 帳號為 user 密碼為 bitnami 登入。
 
 一、如何使用JDK + Maven 建置專案
 
-	1.1 首先設定相關套件 點選 Manage Jenkins -> Global Tool Configuration 設定JDK、Git、Gradle、Maven。
+	1.1 首先設定相關套件 點選 Manage Jenkins -> Global Tool Configuration 設定JDK、Git、Gradle、Maven、Artifactory。
 
 		1.1.1 JDK
 			Name 輸入 -> JDK-1.8.20。
@@ -61,3 +67,5 @@ sh ~/github/docker_centos/compose/Jenkins/Jenkins.sh
             點選 Build -> Invoke top-level Maven targets
             Maven Version 選擇 -> Maven-3.2.2
             Goals 輸入-> clean compile jar:jar
+
+   

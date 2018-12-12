@@ -15,6 +15,10 @@ pip install docker-compose
 
 pip install backports.ssl_match_hostname --upgrade
 
+service docker stop
+
+
+
 systemctl start docker.service
 
 systemctl enable docker.service
