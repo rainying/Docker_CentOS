@@ -5,7 +5,7 @@ services:
     restart: always
     image: sameersbn/redis:4.0.9-1
     networks:
-      gitLab_networks:
+      gitlab_networks:
         ipv4_address: 192.168.220.12
     command:
     - --loglevel warning
@@ -16,7 +16,7 @@ services:
     restart: always
     image: sameersbn/postgresql:10
     networks:
-      gitLab_networks:
+      gitlab_networks:
         ipv4_address: 192.168.220.13
     volumes:
     - /Docker/Postgresql/Volumes:/var/lib/postgresql:Z
@@ -30,7 +30,7 @@ services:
     restart: always
     image: sameersbn/gitlab:11.5.1
     networks:
-      gitLab_networks:
+      gitlab_networks:
         ipv4_address: 192.168.220.11
     depends_on:
     - redis
@@ -158,9 +158,8 @@ services:
     - OAUTH_AZURE_TENANT_ID=
     
 networks:
-  jenkins_networks:
+  gitlab_networks:
     driver: bridge
-    enable_ipv6: false
     ipam:
       driver: default
       config:

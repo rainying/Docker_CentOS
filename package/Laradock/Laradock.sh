@@ -8,9 +8,9 @@ git clone https://github.com/laradock/laradock.git Laradock
 
 cd Laradock
 
-git checkout 22032974c95ddadde18ad90c2fdc346d4b632360
+#git checkout 22032974c95ddadde18ad90c2fdc346d4b632360
 
-git reset --hard HEAD
+#git reset --hard HEAD
 
 /bin/cp env-example .env
 
@@ -22,9 +22,10 @@ perl -pi -e 's/root \/var\/www\/public/root \/var\/www\/laravel\/public/g' nginx
 
 cd ~/Laradock
 
-/bin/cp ~/github/docker_centos/container/Laradock/file/docker-compose.yml ~/Laradock/docker-compose.yml
+/bin/cp ~/github/docker_centos/package/Laradock/file/docker-compose.yml ~/Laradock/docker-compose.yml
 
 docker-compose up -d nginx mysql phpmyadmin redis workspace 
 
 shutdown -h now  
+
 
