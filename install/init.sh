@@ -15,11 +15,18 @@ pip install docker-compose
 
 pip install backports.ssl_match_hostname --upgrade
 
+cp ~/github/docker_centos/file/daemon.json  /etc/docker/daemon.json
+
 systemctl stop docker.service
 
 systemctl start docker.service
 
 systemctl enable docker.service
+
+
+
+
+
 
 
 

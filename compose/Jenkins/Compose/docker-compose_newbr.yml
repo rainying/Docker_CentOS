@@ -1,0 +1,26 @@
+version: '2'
+services:
+  jenkins:
+    build:
+      context: ./Build
+    networks:
+      jenkins_networks:
+        ipv4_address: 192.168.220.2
+    labels:
+      kompose.service.type: nodeport
+    ports:
+      - '8080:8080'
+      - '8443:8443'
+      - '50000:50000'
+    volumes:
+      - '/Docker/Jenkins/Volumes:/bitnami/jenkins'
+      - '/Docker/Jenkins/Volumes/.m2:/home/jenkins/.m2'
+networks:
+  jenkins_networks:
+    driver: bridge
+    enable_ipv6: false
+    ipam:
+      driver: default
+      config:
+          - subnet: 192.168.220.0/24
+            gateway: 192.168.220.1
