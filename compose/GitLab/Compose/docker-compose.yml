@@ -1,16 +1,23 @@
 version: '2'
 services:
   redis:
+    container_name: redis
     restart: always
     image: sameersbn/redis:4.0.9-1
+    networks:
+      gitLab_networks:
+        ipv4_address: 192.168.220.12
     command:
     - --loglevel warning
     volumes:
     - /Docker/Redis/Volumes:/var/lib/redis:Z
-
   postgresql:
+    container_name: postgresql
     restart: always
     image: sameersbn/postgresql:10
+    networks:
+      gitLab_networks:
+        ipv4_address: 192.168.220.13
     volumes:
     - /Docker/Postgresql/Volumes:/var/lib/postgresql:Z
     environment:
@@ -18,10 +25,13 @@ services:
     - DB_PASS=password
     - DB_NAME=gitlabhq_production
     - DB_EXTENSION=pg_trgm
-
   gitlab:
+    container_name: gitlab
     restart: always
     image: sameersbn/gitlab:11.5.1
+    networks:
+      gitLab_networks:
+        ipv4_address: 192.168.220.11
     depends_on:
     - redis
     - postgresql
@@ -146,3 +156,13 @@ services:
     - OAUTH_AZURE_API_KEY=
     - OAUTH_AZURE_API_SECRET=
     - OAUTH_AZURE_TENANT_ID=
+    
+networks:
+  jenkins_networks:
+    driver: bridge
+    enable_ipv6: false
+    ipam:
+      driver: default
+      config:
+          - subnet: 192.168.220.0/24
+            gateway: 192.168.220.1

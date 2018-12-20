@@ -25,7 +25,7 @@ chmod +x ~/github/docker_centos/install/*.sh
 ```
 
 ```
-sh ~/github/docker_centos/install/init.sh  #會重新開機
+sh ~/github/docker_centos/install/init.sh
 ```
 
 
