@@ -1,6 +1,6 @@
 # Docker Laradock #
 
-VirtualBox + Docker + Laravel 的基本部署
+Jenkins + Gitlab + Mavan(Jfrog) (VirtualBox + Docker環境) 的基本部署
 
 ## 步驟 ##
 
