@@ -11,7 +11,7 @@ services:
   jenkins:
     container_name: jenkins
     build:
-      context: ./Build
+      context: ./Jenkins/Build
     networks:
     networks:
       - default_networks
