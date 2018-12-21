@@ -3,6 +3,8 @@ services:
   jenkins:
     container_name: jenkins
     image: bitnami/jenkins:latest
+    networks:
+      - jenkins_networks
     labels:
       kompose.service.type: nodeport
     ports:
@@ -11,3 +13,11 @@ services:
       - '50000:50000'
     volumes:
       - '/Docker/Jenkins/Volumes:/bitnami/jenkins'
+networks:
+  jenkins_networks:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+          - subnet: 192.168.220.0/24
+            gateway: 192.168.220.1
