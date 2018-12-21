@@ -10,6 +10,8 @@ rm -rf /Docker/Jenkins/Volumes
 
 mkdir /Docker/Jenkins/Volumes
 
+mkdir /Docker/Jenkins/Volumes/.m2
+
 chmod -R 777 /Docker/Jenkins/Volumes
 
 rm -rf /Docker/Jenkins/Main

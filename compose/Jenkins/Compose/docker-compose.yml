@@ -2,7 +2,8 @@ version: '2'
 services:
   jenkins:
     container_name: jenkins
-    image: bitnami/jenkins:latest
+    build:
+      context: ./Build
     networks:
       - jenkins_networks
     labels:
@@ -13,6 +14,7 @@ services:
       - '50000:50000'
     volumes:
       - '/Docker/Jenkins/Volumes:/bitnami/jenkins'
+      - '/Docker/Jenkins/Volumes/.m2:/home/jenkins/.m2'
 networks:
   jenkins_networks:
     driver: bridge
