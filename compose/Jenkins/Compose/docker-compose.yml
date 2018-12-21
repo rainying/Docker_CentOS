@@ -19,7 +19,6 @@ services:
 networks:
   jenkins_networks:
     driver: bridge
-    enable_ipv6: false
     ipam:
       driver: default
       config:
