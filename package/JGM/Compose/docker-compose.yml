@@ -3,7 +3,7 @@ services:
   jenkins:
     container_name: jenkins
     build:
-      context: ./Build
+      context: ./Build/Jenkins
     networks:
       - default_networks
     labels:
