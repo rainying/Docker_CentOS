@@ -1,3 +1,9 @@
+cd /Docker/JGM/Main
+
+docker-compose down
+
+cd 
+
 mkdir /Docker
 
 mkdir /Docker/Redis 
