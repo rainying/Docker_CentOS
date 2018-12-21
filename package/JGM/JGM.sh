@@ -18,6 +18,8 @@ mkdir /Docker/Postgresql/Volumes
 
 mkdir /Docker/Jenkins/Volumes
 
+mkdir /Docker/Jenkins/Volumes/.m2
+
 mkdir /Docker/Gitlab/Volumes
 
 chmod -R 777 /Docker/Redis/Volumes
