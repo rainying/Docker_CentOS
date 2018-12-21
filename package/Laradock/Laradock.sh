@@ -26,6 +26,6 @@ cd ~/Laradock
 
 docker-compose up -d nginx mysql phpmyadmin redis workspace 
 
-shutdown -h now  
+#shutdown -h now  
 
 
