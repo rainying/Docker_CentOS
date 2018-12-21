@@ -10,8 +10,6 @@ networks:
 services:
   jenkins:
     container_name: jenkins
-    build:
-      context: ./Build/Jenkins
     networks:
     networks:
       - default_networks
