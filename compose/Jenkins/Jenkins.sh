@@ -2,6 +2,8 @@ mkdir /Docker
 
 mkdir /Docker/Jenkins 
 
+rm -rf /Docker/Jenkins/Volumes
+
 mkdir /Docker/Jenkins/Volumes
 
 chmod -R 777 /Docker/Jenkins/Volumes
