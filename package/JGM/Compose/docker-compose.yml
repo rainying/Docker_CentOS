@@ -39,7 +39,6 @@ services:
     restart: always
     image: sameersbn/postgresql:10
     networks:
-    networks:
       - default_networks
     volumes:
       - /Docker/Postgresql/Volumes:/var/lib/postgresql:Z
