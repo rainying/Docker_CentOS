@@ -1,3 +1,7 @@
+cd /Docker/Jenkins/Main
+
+docker-compose down
+
 mkdir /Docker
 
 mkdir /Docker/Jenkins 
