@@ -6,19 +6,19 @@ networks:
     ipam:
       driver: default
       config:
-          - subnet: 192.168.229.0/24
+          - subnet: 192.168.221.0/24
   frontend:
     driver: ${NETWORKS_DRIVER}
     ipam:
       driver: default
       config:
-          - subnet: 192.168.221.0/24
+          - subnet: 192.168.222.0/24
   backend:
     driver: ${NETWORKS_DRIVER}
     ipam:
       driver: default
       config:
-          - subnet: 192.168.222.0/24
+          - subnet: 192.168.223.0/24
 volumes:
   mysql:
     driver: ${VOLUMES_DRIVER}
