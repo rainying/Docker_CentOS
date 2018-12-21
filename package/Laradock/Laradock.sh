@@ -4,6 +4,8 @@ perl -pi -e 's/vboxadd:x:997/vboxadd:x:1000/g' /etc/passwd
 
 perl -pi -e 's/vboxsf:x:995/vboxsf:x:1000/g' /etc/group
 
+rm -rf Laradock
+
 git clone https://github.com/laradock/laradock.git Laradock
 
 cd Laradock
@@ -20,9 +22,11 @@ perl -pi -e 's/RUN usermod -u 1000 www-data/RUN usermod -u 1000 www-data\nRUN gr
 
 perl -pi -e 's/root \/var\/www\/public/root \/var\/www\/laravel\/public/g' nginx/sites/default.conf
 
+/bin/cp ~/github/docker_centos/package/Laradock/file/docker-compose.yml ~/Laradock/docker-compose.yml
+
 cd ~/Laradock
 
-/bin/cp ~/github/docker_centos/package/Laradock/file/docker-compose.yml ~/Laradock/docker-compose.yml
+docker-compose down
 
 docker-compose up -d nginx mysql phpmyadmin redis workspace 
 
