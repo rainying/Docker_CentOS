@@ -10,7 +10,7 @@ docker rm [:CONTAINER ID]
 docker run --name [:CONTAINER Name] -p [:HOSTPORT_CONTAINERPORT] -d [:DDOCKERIMAGE] 
 
 docker inspect [:CONTAINER ID]
-dock -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' [:CONTAINER ID]
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' [:CONTAINER ID]
 
 docker network ls 
 docker network inspect [:NETWORK ID]
