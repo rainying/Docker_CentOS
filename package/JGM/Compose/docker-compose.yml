@@ -24,7 +24,7 @@ services:
       - 8081:8081
     volumes:
       - /Docker/Jfrog/Volumes:/var/opt/jfrog/artifactory
-   redis:
+  redis:
     container_name: redis
     restart: always
     image: sameersbn/redis:4.0.9-1
