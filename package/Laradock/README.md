@@ -25,7 +25,7 @@ chmod +x ~/github/docker_centos/package/Laradock/*.sh
 ```
 
 ```
-sh ~/github/docker_centos/package/Laradock/Laradock.sh
+sh ~/github/docker_centos/package/Laradock/Laradock.sh #會關機重開
 ```
 
 ```

@@ -12,7 +12,7 @@ cd Laradock
 
 #git reset --hard HEAD
 
-/bin/cp env-example .env
+/bin/cp ~/github/docker_centos/package/Laradock/file/env ~/Laradock/.env 
 
 perl -pi -e 's/APP_CODE_PATH_HOST=..\//APP_CODE_PATH_HOST=\/media\/sf_Share\/www\//g' .env #指到共用資料夾
 
