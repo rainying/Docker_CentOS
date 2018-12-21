@@ -22,6 +22,8 @@ mkdir /Docker/Jfrog/Volumes
 
 mkdir /Docker/Postgresql/Volumes
 
+rm -rf /Docker/Jenkins/Volumes
+
 mkdir /Docker/Jenkins/Volumes
 
 mkdir /Docker/Jenkins/Volumes/.m2
