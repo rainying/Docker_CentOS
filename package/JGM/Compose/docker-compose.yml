@@ -13,8 +13,8 @@ services:
     build:
       context: ./Build
     networks:
-      default_networks:
-        ipv4_address: 192.168.220.2
+    networks:
+      - default_networks
     labels:
       kompose.service.type: nodeport
     ports:
@@ -29,8 +29,7 @@ services:
     restart: always
     image: sameersbn/redis:4.0.9-1
     networks:
-      gitlab_networks:
-        ipv4_address: 192.168.220.12
+      - default_networks
     command:
       - --loglevel warning
     volumes:
@@ -40,8 +39,8 @@ services:
     restart: always
     image: sameersbn/postgresql:10
     networks:
-      gitlab_networks:
-        ipv4_address: 192.168.220.13
+    networks:
+      - default_networks
     volumes:
       - /Docker/Postgresql/Volumes:/var/lib/postgresql:Z
     environment:
