@@ -1,6 +1,12 @@
 version: '3'
 
 networks:
+  default:
+    driver: ${NETWORKS_DRIVER}
+    ipam:
+      driver: default
+      config:
+          - subnet: 192.168.229.0/24
   frontend:
     driver: ${NETWORKS_DRIVER}
     ipam:
