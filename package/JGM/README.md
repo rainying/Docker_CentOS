@@ -21,11 +21,11 @@ git clone https://github.com/rainying/Docker_CentOS.git ~/github/docker_centos
 ```
 
 ```
-chmod +x ~/github/docker_centos/compose/Laradock/*.sh
+chmod +x ~/github/docker_centos/package/JGM/*.sh
 ```
 
 ```
-sh ~/github/docker_centos/compose/Laradock/Laradock.sh
+sh ~/github/docker_centos/package/JGM/JGM.sh
 ```
 
 ```
