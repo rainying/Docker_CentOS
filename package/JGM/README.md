@@ -28,33 +28,10 @@ chmod +x ~/github/docker_centos/package/JGM/*.sh
 sh ~/github/docker_centos/package/JGM/JGM.sh
 ```
 
-```
-cd ~/Laradock
-```
+cd /Docker/JGM/Main/
 
-```
-docker-compose up -d nginx mysql phpmyadmin redis workspace 
-```
+docker-compose exec -u root jenkins bash
 
-```
-docker-compose exec -u root workspace bash
-```
-
-```
-composer create-project laravel/laravel --prefer-dist
-```
-
-```
-exit
-```
-
-```
-curl http://127.0.0.1/
-```
-
-```
-sh ~/github/docker_centos/container/Laradock/Laradock.sh
-```
 
 以下為教學
 
