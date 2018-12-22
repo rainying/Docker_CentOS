@@ -6,6 +6,8 @@ WORKDIR /root
 
 ENV JAVA_OPTS -Dsun.jnu.encoding=UTF-8 -Dfile.encoding=UTF-8
 
+ENV LANG C.UTF-8
+
 RUN mkdir /home/jenkins
 
 RUN mkdir /home/jenkins/.m2

@@ -58,9 +58,9 @@ sh ~/github/docker_centos/container/Laradock/Laradock.sh
 
 以下為教學
 
-首先進入登入頁面 帳號為 user 密碼為 bitnami 登入。
+一、Jenkins 初始設定
 
-一、如何使用JDK + Maven 建置專案
+	首先進入登入頁面 帳號為 user 密碼為 bitnami 登入。
 
 	1.1 首先設定相關套件 點選 Manage Jenkins -> Global Tool Configuration 設定JDK、Git、Gradle、Maven、Artifactory。
 
@@ -95,7 +95,7 @@ sh ~/github/docker_centos/container/Laradock/Laradock.sh
             Maven Version 選擇 -> Maven-3.2.2
             Goals 輸入-> clean compile jar:jar
 
-一、初始設定
+二、GitLab 初始設定
 
 	1.1 root 密碼設定
 		剛開始登入的時候設定root密碼，供GitLab root帳號使用。
@@ -106,3 +106,27 @@ sh ~/github/docker_centos/container/Laradock/Laradock.sh
 	    點選 Admin area -> Sign-up restrictions -> Sign-up enabled
 
 	    
+
+三、Jforg 初始設定
+
+	首先進入登入頁面 帳號為 admin 密碼為 password 登入。
+
+	Admin -> Repositories -> Local -> New 
+
+	Repository Key -> libs-release-local
+	Select Package Type -> Maven
+	Repository Layout -> maven-2-default
+
+	Admin -> Repositories -> Remote -> New 
+
+	Repository Key -> jcenter
+	Select Package Type -> Maven
+    URL -> http://jcenter.bintray.com
+    Repository Layout -> maven-2-default
+
+    Admin -> Repositories -> Virtual -> New 
+	
+	Repository Key -> libs-release
+	Select Package Type -> Maven
+	Repository Layout -> maven-2-default
+    Selected Repositories -> libs-release-local + jcenter
