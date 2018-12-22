@@ -4,9 +4,9 @@ LABEL maintainer="Vic Ying <rainying153@gmail.com>"
 
 WORKDIR /root
 
-ENV JAVA_OPTS -Dsun.jnu.encoding=UTF-8 -Dfile.encoding=Big-5
+ENV JAVA_OPTS -Dsun.jnu.encoding=UTF-8 -Dfile.encoding=UTF-8
 
-ENV JAVA_TOOL_OPTIONS -Dfile.encoding=Big-5
+ENV JAVA_TOOL_OPTIONS -Dfile.encoding=UTF-8
 
 ENV LANG C.UTF-8
 
