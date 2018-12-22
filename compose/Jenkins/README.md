@@ -53,6 +53,21 @@ docker-compose exec -u root jenkins bash
 		1.1.4 Maven。
 			Name 輸入 -> Maven-3.2.2
 			Version 選擇  -> 3.2.2
+    
+    1.2 首先設定相關套件 點選 Manage Jenkins -> Configure System 設定語言。
+
+        1.2.1 設定語言 Global properties -> Environment variables -> List of variables
+			
+			1.2.1.1 新增參數一
+				Name 輸入 -> JAVA_TOOL_OPTIONS
+				Value 輸入 -> -Dfile.encoding=UTF-8
+
+			1.2.1.2 新增參數二
+				Name 輸入 -> zh_CN.UTF-8
+				Value 輸入 -> zh_CN.UTF-8
+
+		1.2.2 設定語言 Locale ->  -> List of variables
+            Default Language 輸入 -> zh_TW
 
 	1.2 建立一個新的專案來測試
 
@@ -68,4 +83,4 @@ docker-compose exec -u root jenkins bash
             Maven Version 選擇 -> Maven-3.2.2
             Goals 輸入-> clean compile jar:jar
 
-   
+    
