@@ -4,11 +4,11 @@ LABEL maintainer="Vic Ying <rainying153@gmail.com>"
 
 WORKDIR /root
 
-ENV JAVA_OPTS -Dsun.jnu.encoding=MS950 -Dfile.encoding=UTF-8
+ENV JAVA_OPTS -Dsun.jnu.encoding=UTF-8 -Dfile.encoding=UTF-8
 
 ENV JAVA_TOOL_OPTIONS -Dfile.encoding=UTF-8
 
-ENV LANG zh_TW.UTF-8
+ENV LANG C.UTF-8
 
 RUN mkdir /home/jenkins
 
