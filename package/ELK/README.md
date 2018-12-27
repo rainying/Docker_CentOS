@@ -1,0 +1,35 @@
+# Docker ELK #
+
+ELK(Kibana + Logstash + Elasticsearch)(VirtualBox + Docker環境) 的基本部署
+
+## 步驟 ##
+
+```
+yum -y install epel-release
+```
+
+```
+yum -y install git 
+```
+
+```
+rm -rf ~/github/docker_centos
+```
+
+```
+git clone https://github.com/rainying/Docker_CentOS.git ~/github/docker_centos
+```
+
+```
+chmod +x ~/github/docker_centos/package/ELK/*.sh
+```
+
+```
+sh ~/github/docker_centos/package/ELK/JGM.sh
+```
+
+
+ git clone https://github.com/deviantony/docker-elk.git ~/docker-elk
+
+
+
