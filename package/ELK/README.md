@@ -29,4 +29,8 @@ sh ~/github/docker_centos/package/ELK/ELK.sh
 ```
 
 
+測試
 
+yum install -y nc
+
+nc 127.0.0.1 5000 < test.txt

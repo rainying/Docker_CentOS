@@ -1,6 +1,7 @@
 version: '2'
 services:
   logstash:
+    container_name: ELK_Logstash
     build:
       context: Build/Logstash/
       args:
@@ -18,6 +19,7 @@ services:
     depends_on:
       - elasticsearch
   elasticsearch:
+    container_name: ELK_Elasticsearch
     build:
       context: Build/Elasticsearch/
       args:
@@ -32,6 +34,7 @@ services:
     networks:
       - default_networks
   kibana:
+    container_name: ELK_Kibana
     build:
       context: Build/Kibana/
       args:

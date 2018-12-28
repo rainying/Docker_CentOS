@@ -6,37 +6,37 @@ cd
 
 mkdir /Docker
 
-mkdir /Docker/Redis 
+mkdir /Docker/JGM_Redis 
 
-mkdir /Docker/Postgresql 
+mkdir /Docker/JGM_Postgresql 
 
-mkdir /Docker/Jenkins
+mkdir /Docker/JGM_Jenkins
 
-mkdir /Docker/Jfrog 
+mkdir /Docker/JGM_Jfrog 
 
-mkdir /Docker/Gitlab 
+mkdir /Docker/JGM_Gitlab 
 
-mkdir /Docker/Redis/Volumes
+mkdir /Docker/JGM_Redis/Volumes
 
-mkdir /Docker/Jfrog/Volumes
+mkdir /Docker/JGM_Jfrog/Volumes
 
-mkdir /Docker/Postgresql/Volumes
+mkdir /Docker/JGM_Postgresql/Volumes
 
-mkdir /Docker/Jenkins/Volumes
+mkdir /Docker/JGM_Jenkins/Volumes
 
-mkdir /Docker/Jenkins/Volumes/.m2
+mkdir /Docker/JGM_Jenkins/Volumes/.m2
 
-mkdir /Docker/Gitlab/Volumes
+mkdir /Docker/JGM_Gitlab/Volumes
 
-chmod -R 777 /Docker/Redis/Volumes
+chmod -R 777 /Docker/JGM_Redis/Volumes
 
-chmod -R 777 /Docker/Postgresql/Volumes
+chmod -R 777 /Docker/JGM_Postgresql/Volumes
 
-chmod -R 777 /Docker/Jenkins/Volumes
+chmod -R 777 /Docker/JGM_Jenkins/Volumes
 
-chmod -R 777 /Docker/Jfrog/Volumes
+chmod -R 777 /Docker/JGM_Jfrog/Volumes
 
-chmod -R 777 /Docker/Gitlab/Volumes
+chmod -R 777 /Docker/JGM_Gitlab/Volumes
 
 mkdir /Docker/JGM
 

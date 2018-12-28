@@ -27,10 +27,10 @@ chmod +x ~/github/docker_centos/install/*.sh
 以下二選一
 
 ```
-sh ~/github/docker_centos/install/init.sh #網路需要更改
+sh ~/github/docker_centos/install/init.sh #網路已更改
 ```
 
 ```
-sh ~/github/docker_centos/install/init_notchangrenetwork.sh #網路無須更改
+sh ~/github/docker_centos/install/init_notchangrenetwork.sh #網路未更改
 ```
 
