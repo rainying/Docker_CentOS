@@ -80,7 +80,7 @@ docker-compose exec -u root jenkins bash
 	1.2 帳號申請設定
 
 		1.2.1 關閉登入時帳號申請
-	    點選 Admin area -> Sign-up restrictions -> Sign-up enabled
+	    點掉 Admin area > Settings -> Sign-up restrictions -> Sign-up enabled
 
 	    
 
