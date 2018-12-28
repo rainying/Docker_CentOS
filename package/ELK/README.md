@@ -25,11 +25,8 @@ chmod +x ~/github/docker_centos/package/ELK/*.sh
 ```
 
 ```
-sh ~/github/docker_centos/package/ELK/JGM.sh
+sh ~/github/docker_centos/package/ELK/ELK.sh
 ```
-
-
- git clone https://github.com/deviantony/docker-elk.git ~/docker-elk
 
 
 
