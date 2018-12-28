@@ -2,6 +2,8 @@ cd /Docker/ELK/Main
 
 docker-compose down
 
+cd ~ 
+
 mkdir /Docker
 
 mkdir /Docker/ELK
@@ -9,6 +11,10 @@ mkdir /Docker/ELK
 rm -rf /Docker/ELK/Main
 
 mkdir /Docker/ELK/Main
+
+/bin/cp -R ~/github/docker_centos/package/ELK/Compose /Docker/ELK/Main
+
+rm -rf /Docker/ELK/GitFile
 
 mkdir /Docker/ELK/GitFile
 
@@ -32,7 +38,11 @@ chmod -R 777 /Docker/ELK_Logstash/Volumes
 
 chmod -R 777 /Docker/ELK_Kibana/Volumes
 
-/bin/cp -R ~/github/docker_centos/package/ELK/Compose /Docker/ELK/Main
+rm -rf /Docker/ELK_Elasticsearch/Volumes/Dockerfile
+
+rm -rf /Docker/ELK_Logstash/Volumes/Dockerfile
+
+rm -rf /Docker/ELK_Kibana/Volumes/Dockerfile
 
 cd /Docker/ELK/Main
 
