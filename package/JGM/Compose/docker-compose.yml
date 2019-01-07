@@ -15,11 +15,12 @@ services:
     volumes:
       - '/Docker/JGM_Jenkins/Volumes:/bitnami/jenkins'
       - '/Docker/JGM_Jenkins/Volumes/.m2:/home/jenkins/.m2'
+    command:
+      sh -c "cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime"
 networks:
   default_networks:
     driver: bridge
     ipam:
-      driver: default
-      config:
+      driver: def
           - subnet: 192.168.220.0/24
             gateway: 192.168.220.1
