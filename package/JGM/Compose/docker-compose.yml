@@ -82,8 +82,8 @@ services:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
 
-      - TZ=Asia/Taipei
-      - GITLAB_TIMEZONE=Asia/Taipei
+      - TZ=Asia/Shanghai
+      - GITLAB_TIMEZONE=Asia/Shanghai
 
       - GITLAB_HTTPS=false
       - SSL_SELF_SIGNED=false
