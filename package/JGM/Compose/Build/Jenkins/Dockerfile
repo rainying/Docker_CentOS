@@ -8,6 +8,8 @@ ENV JAVA_OPTS -Dsun.jnu.encoding=UTF-8 -Dfile.encoding=UTF-8
 
 ENV JAVA_TOOL_OPTIONS -Dfile.encoding=UTF-8
 
+ENV JENKINS_JAVA_OPTIONS -Duser.timezone=Asia/Shanghai
+
 ENV LANG C.UTF-8
 
 RUN cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
