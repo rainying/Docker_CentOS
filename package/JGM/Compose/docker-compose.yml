@@ -15,6 +15,8 @@ services:
     volumes:
       - '/Docker/JGM_Jenkins/Volumes:/bitnami/jenkins'
       - '/Docker/JGM_Jenkins/Volumes/.m2:/home/jenkins/.m2'
+    command:
+      sh -c "RUN cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime"
   artifactory:
     container_name: JGM_Artifactory
     image: docker.bintray.io/jfrog/artifactory-oss:latest
@@ -24,6 +26,8 @@ services:
       - 8081:8081
     volumes:
       - /Docker/JGM_Jfrog/Volumes:/var/opt/jfrog/artifactory
+    command:
+      sh -c "RUN cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime"
   redis:
     container_name: JGM_Redis
     restart: always
@@ -34,6 +38,8 @@ services:
       - --loglevel warning
     volumes:
       - /Docker/JGM_Redis/Volumes:/var/lib/redis:Z
+    command:
+      sh -c "RUN cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime"
   postgresql:
     container_name: JGM_Postgresql
     restart: always
@@ -47,6 +53,8 @@ services:
       - DB_PASS=password
       - DB_NAME=gitlabhq_production
       - DB_EXTENSION=pg_trgm
+    command:
+      sh -c "RUN cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime"
   gitlab:
     container_name: JGM_Gitlab
     restart: always
@@ -60,6 +68,8 @@ services:
       - "10080:80"
     volumes:
       - /Docker/JGM_Gitlab/Volumes:/home/git/data:Z
+    command:
+      sh -c "RUN cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime"
     environment:
       - DEBUG=false
 
@@ -179,7 +189,7 @@ services:
       - OAUTH_AZURE_TENANT_ID=
 networks:
   default_networks:
-    driver: bridge
+    driver: net
     ipam:
       driver: default
       config:
