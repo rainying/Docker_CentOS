@@ -69,7 +69,6 @@ services:
       - "10080:80"
     volumes:
       - /Docker/JGM_Gitlab/Volumes:/home/git/data:Z
-
     environment:
       - DEBUG=false
 
@@ -84,7 +83,7 @@ services:
       - REDIS_PORT=6379
 
       - TZ=Asia/Taiwan
-      - GITLAB_TIMEZONE=Asia/Taiwan
+      - GITLAB_TIMEZONE=Taiwan
 
       - GITLAB_HTTPS=false
       - SSL_SELF_SIGNED=false
