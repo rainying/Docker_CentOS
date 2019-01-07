@@ -84,7 +84,7 @@ services:
       - REDIS_PORT=6379
 
       - TZ=Asia/Kolkata
-      - GITLAB_TIMEZONE=Asia/Shanghai
+      - GITLAB_TIMEZONE=Asia/Taiwan
 
       - GITLAB_HTTPS=false
       - SSL_SELF_SIGNED=false
