@@ -10,8 +10,6 @@ ENV JAVA_TOOL_OPTIONS -Dfile.encoding=UTF-8
 
 ENV LANG C.UTF-8
 
-RUN cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
-
 RUN mkdir /home/jenkins
 
 RUN mkdir /home/jenkins/.m2
