@@ -189,7 +189,7 @@ services:
       - OAUTH_AZURE_TENANT_ID=
 networks:
   default_networks:
-    driver: net
+    driver: bridge
     ipam:
       driver: default
       config:
