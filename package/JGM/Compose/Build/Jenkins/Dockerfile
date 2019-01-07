@@ -4,11 +4,9 @@ LABEL maintainer="Vic Ying <rainying153@gmail.com>"
 
 WORKDIR /root
 
-ENV JAVA_OPTS -Dsun.jnu.encoding=UTF-8 -Dfile.encoding=UTF-8
+ENV JAVA_OPTS -Dsun.jnu.encoding=UTF-8 -Dfile.encoding=UTF-8 -Duser.timezone=Asia/Shanghai
 
 ENV JAVA_TOOL_OPTIONS -Dfile.encoding=UTF-8
-
-ENV JENKINS_JAVA_OPTIONS -Duser.timezone=Asia/Shanghai
 
 ENV LANG C.UTF-8
 
