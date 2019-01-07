@@ -5,7 +5,8 @@ services:
     build:
       context: ./Build/Jenkins
     networks:
-      - default_networks
+      default_networks :
+        ipv4_address: 192.168.220.101
     labels:
       kompose.service.type: nodeport
     ports:
@@ -19,7 +20,8 @@ services:
     container_name: JGM_Artifactory
     image: docker.bintray.io/jfrog/artifactory-oss:latest
     networks:
-      - default_networks
+      default_networks :
+        ipv4_address: 192.168.220.103
     ports:
       - 8081:8081
     volumes:
@@ -29,19 +31,19 @@ services:
     restart: always
     image: sameersbn/redis:4.0.9-1
     networks:
-      - default_networks
+      default_networks :
+        ipv4_address: 192.168.220.201
     command:
       - --loglevel warning
     volumes:
       - /Docker/JGM_Redis/Volumes:/var/lib/redis:Z
-    command:
-      sh -c "cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime"
   postgresql:
     container_name: JGM_Postgresql
     restart: always
     image: sameersbn/postgresql:10
     networks:
-      - default_networks
+      default_networks :
+        ipv4_address: 192.168.220.202
     volumes:
       - /Docker/JGM_Postgresql/Volumes:/var/lib/postgresql:Z
     environment:
@@ -49,14 +51,13 @@ services:
       - DB_PASS=password
       - DB_NAME=gitlabhq_production
       - DB_EXTENSION=pg_trgm
-    command:
-      sh -c "cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime"
   gitlab:
     container_name: JGM_Gitlab
     restart: always
     image: sameersbn/gitlab:11.5.1
     networks:
-      - default_networks
+      default_networks :
+        ipv4_address: 192.168.220.102
     depends_on:
       - redis
       - postgresql
@@ -64,8 +65,6 @@ services:
       - "10080:80"
     volumes:
       - /Docker/JGM_Gitlab/Volumes:/home/git/data:Z
-    command:
-      sh -c "cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime"
     environment:
       - DEBUG=false
 
