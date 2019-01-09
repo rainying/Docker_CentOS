@@ -28,6 +28,12 @@ services:
     volumes:
       - /Docker/JGM_Jfrog/Volumes:/var/opt/jfrog/artifactory
       - /etc/localtime:/etc/localtime
+    restart: always
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 32000
+        hard: 40000
   redis:
     container_name: JGM_Redis
     restart: always

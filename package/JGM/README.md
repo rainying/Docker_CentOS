@@ -72,6 +72,10 @@ docker-compose exec -u root jenkins bash
             Maven Version 選擇 -> Maven-3.2.2
             Goals 輸入-> clean compile jar:jar
 
+        Slack Notification 通知固定頻道
+        Build Monitor View 畫面 	
+		build-metrics 控制台畫面
+
 二、GitLab 初始設定
 
 	1.1 root 密碼設定
