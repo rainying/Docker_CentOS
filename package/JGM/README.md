@@ -111,3 +111,5 @@ docker-compose exec -u root jenkins bash
 	Select Package Type -> Maven
 	Repository Layout -> maven-2-default
     Selected Repositories -> libs-release-local + jcenter
+
+    IDEA如何上傳  可以參考https://my.oschina.net/360yg/blog/1589687
