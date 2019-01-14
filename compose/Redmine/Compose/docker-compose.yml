@@ -1,17 +1,16 @@
-version: '3.1'
+version: '2'
 services:
-  Redmine:
-    image: redmine
-    restart: always
+  redmine:
+    image: 'bitnami/redmine:latest'
     ports:
-      - 8080:3000
+      - '80:3000'
     environment:
-      REDMINE_DB_MYSQL: Redmine_MySql
-      REDMINE_DB_PASSWORD: example
-  Redmine_MySql:
-    image: mysql:5.7
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: example
-      MYSQL_DATABASE: redmine
-
+      - REDMINE_DB_POSTGRES=postgresql
+    volumes:
+      - '/Docker/Redmine/Volumes:/bitnami'
+    depends_on:
+      - postgresql
+  postgresql:
+    image: 'bitnami/postgresql:latest'
+    volumes:
+      - '/Docker/Redmine_Postgresql/Volumes:/bitnami'
