@@ -6,12 +6,12 @@ services:
     ports:
       - 8080:3000
     environment:
-      REDMINE_DB_MYSQL: db
+      REDMINE_DB_MYSQL: Redmine_MySql
       REDMINE_DB_PASSWORD: example
   Redmine_MySql:
     image: mysql:5.7
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: example
-      MYSQL_DATABASE: redmine
+      MYSQL_DATABASE: Redmine
 
