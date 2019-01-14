@@ -1,6 +1,6 @@
 version: '3.1'
 services:
-  redmine:
+  Redmine:
     image: redmine
     restart: always
     ports:
@@ -8,9 +8,10 @@ services:
     environment:
       REDMINE_DB_MYSQL: db
       REDMINE_DB_PASSWORD: example
-  db:
+  Redmine_MySql:
     image: mysql:5.7
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: example
       MYSQL_DATABASE: redmine
+
