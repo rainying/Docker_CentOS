@@ -4,6 +4,10 @@ mkdir /Docker/Redmine
 
 mkdir /Docker/Redmine_Postgresql/
 
+rm -rf /Docker/Redmine/Volumes
+
+rm -rf /Docker/Redmine_Postgresql/Volumes
+
 mkdir /Docker/Redmine/Volumes
 
 mkdir /Docker/Redmine_Postgresql/Volumes
