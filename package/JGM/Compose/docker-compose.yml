@@ -47,7 +47,7 @@ services:
       - /Docker/JGM_Redis/Volumes:/var/lib/redis:Z
       - /etc/localtime:/etc/localtime
   postgresql:
-    container_name: JGM_PoJGM_GitLab_Postgresqlstgresql
+    container_name: JGM_GitLab_Postgresql
     restart: always
     image: sameersbn/postgresql:10
     networks:
