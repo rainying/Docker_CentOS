@@ -33,4 +33,4 @@ sh ~/github/docker_centos/package/ELK/ELK.sh
 
 yum install -y nc
 
-nc 127.0.0.1 5000 < test.txt
+nc 127.0.0.1 5000 < ~/github/docker_centos/package/ELK/File/test.txt
