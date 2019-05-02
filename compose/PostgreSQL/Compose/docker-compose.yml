@@ -1,0 +1,11 @@
+version: '2'
+services:
+  PostgreSQL:
+    autoredeploy: true
+    environment:
+      - POSTGRES_PASSWORD=password
+    image: 'postgres:latest'
+    volumes:
+      - /Docker/PostgreSQL/Volumes:/var/lib/redis:Z
+    ports:
+      - '5432:5432'
