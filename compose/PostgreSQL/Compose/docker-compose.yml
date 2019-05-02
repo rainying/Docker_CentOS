@@ -1,11 +1,15 @@
 version: '2'
 services:
   PostgreSQL:
-    autoredeploy: true
-    environment:
-      - POSTGRES_PASSWORD=password
-    image: 'postgres:latest'
+    image: postgres:latest
+    container_name: PostgreSQL_PostgreSQL
     volumes:
-      - /Docker/PostgreSQL/Volumes:/var/lib/redis:Z
+      - /Docker/PostgreSQL/Volumes:/var/lib/postgresql/data
+    expose:
+      - 5432
     ports:
-      - '5432:5432'
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=python
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=password
