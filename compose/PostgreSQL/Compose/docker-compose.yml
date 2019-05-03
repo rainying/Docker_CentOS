@@ -2,7 +2,7 @@ version: '2'
 services:
   PostgreSQL:
     image: postgres:latest
-    container_name: PostgreSQL_PostgreSQL
+    container_name: PostgreSQL
     volumes:
       - /Docker/PostgreSQL/Volumes:/var/lib/postgresql/data
     expose:
@@ -13,3 +13,6 @@ services:
       - POSTGRES_DB=python
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=password
+    networks:
+      gitlab_networks:
+        ipv4_address: 192.168.220.21
