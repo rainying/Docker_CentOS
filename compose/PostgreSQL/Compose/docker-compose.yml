@@ -14,5 +14,13 @@ services:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=password
     networks:
-      gitlab_networks:
+      default_networks:
         ipv4_address: 192.168.220.21
+networks:
+  default_networks:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+          - subnet: 192.168.220.0/24
+            gateway: 192.168.220.1
