@@ -15,7 +15,7 @@ services:
       - POSTGRES_PASSWORD=password
     networks:
       default_networks:
-        ipv4_address: 192.168.220.21
+        ipv4_address: 192.168.220.104
 networks:
   default_networks:
     driver: bridge
