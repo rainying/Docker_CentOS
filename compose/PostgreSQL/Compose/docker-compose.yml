@@ -14,10 +14,10 @@ services:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=password
     networks:
-      default_networks:
+      postgreSQL_networks:
         ipv4_address: 192.168.221.101
 networks:
-  default_networks:
+  postgreSQL_networks:
     driver: bridge
     ipam:
       driver: default
