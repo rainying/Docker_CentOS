@@ -15,12 +15,12 @@ services:
       - POSTGRES_PASSWORD=password
     networks:
       default_networks:
-        ipv4_address: 192.168.220.104
+        ipv4_address: 192.168.221.101
 networks:
   default_networks:
     driver: bridge
     ipam:
       driver: default
       config:
-          - subnet: 192.168.220.0/24
-            gateway: 192.168.220.1
+          - subnet: 192.168.221.0/24
+            gateway: 192.168.221.1
